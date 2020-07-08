@@ -57,7 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-O55QRS2\MSSQLSERVERSAM;Initial Catalog=TiendaMessi;Integrated"& _ 
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-O55QRS2\MSSQLSERVERSAM;Initial Catalog=TiendaBarca;Integrated"& _ 
             " Security=True")>  _
         Public ReadOnly Property conexion() As String
             Get

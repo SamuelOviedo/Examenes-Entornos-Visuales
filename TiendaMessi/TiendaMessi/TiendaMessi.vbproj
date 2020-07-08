@@ -80,10 +80,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexion.vb" />
-    <Compile Include="CRUD.Designer.vb">
-      <DependentUpon>CRUD.vb</DependentUpon>
+    <Compile Include="Productos.Designer.vb">
+      <DependentUpon>Productos.vb</DependentUpon>
     </Compile>
-    <Compile Include="CRUD.vb">
+    <Compile Include="Productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas.Designer.vb">
+      <DependentUpon>Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu.vb">
@@ -113,8 +119,11 @@
     <EmbeddedResource Include="AgregarCliente.resx">
       <DependentUpon>AgregarCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRUD.resx">
-      <DependentUpon>CRUD.vb</DependentUpon>
+    <EmbeddedResource Include="Productos.resx">
+      <DependentUpon>Productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas.resx">
+      <DependentUpon>Ventas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>

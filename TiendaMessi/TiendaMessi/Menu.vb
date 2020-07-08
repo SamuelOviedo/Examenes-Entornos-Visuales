@@ -1,4 +1,27 @@
-﻿Public Class Menu
+﻿Imports System.Runtime.InteropServices
+Public Class Menu
+
+#Region "Move form"
+    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    Private Shared Sub ReleaseCapture()
+    End Sub
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(hWnd As IntPtr, wMs As Integer, wParam As Integer, lParam As Integer)
+
+    End Sub
+
+    Private Sub panelSuperior_MouseMove(sender As Object, e As MouseEventArgs) Handles panelSuperior.MouseMove
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+
+    End Sub
+
+    Private Sub panelSuperior_Paint(sender As Object, e As PaintEventArgs) Handles panelSuperior.Paint
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+
+#End Region
     Private Sub abrirFormulario(ByVal formHijo As Object)
 
         If panelContenido.Controls.Count > 0 Then
@@ -17,13 +40,12 @@
         frm.Show()
     End Sub
 
-    Private Sub btnCRUD_Click(sender As Object, e As EventArgs) Handles btnCRUD.Click
-        abrirFormulario(CRUD)
-
+    Private Sub btnCRUD_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
+        abrirFormulario(Ventas)
 
     End Sub
 
-    Private Sub btnIngresarCliente_Click(sender As Object, e As EventArgs) Handles btnIngresarCliente.Click
+    Private Sub btnIngresarCliente_Click(sender As Object, e As EventArgs) Handles btnCliente.Click
         abrirFormulario(AgregarCliente)
 
     End Sub
@@ -52,5 +74,9 @@
         Else
 
         End If
+    End Sub
+
+    Private Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
+        abrirFormulario(Productos)
     End Sub
 End Class
